@@ -51,6 +51,7 @@ def main():
         json_file = str(cmd_args.file_number) + ".json"
         url_file = str(cmd_args.file_number) + ".txt"
         post_data = {}
+        post_req_headers =  {"Content-Type":"application/json"}
         if check_file_exists(json_file):
             if check_file_exists(url_file):
                 with open(json_file, "r") as f:
@@ -58,7 +59,7 @@ def main():
                     print("\nPOSTing Data Content:\n")
                     print(post_data)
                 post_req_url = url_reader(url_file)
-                post_response = requests.post(post_req_url, post_data)
+                post_response = requests.post(post_req_url, data = post_data, headers = post_req_headers)
                 post_response_data = post_response.content.decode("ascii")
                 post_response_code = str(post_response.status_code)
                 print("\nResponse POST Status Code: " + post_response_code)
