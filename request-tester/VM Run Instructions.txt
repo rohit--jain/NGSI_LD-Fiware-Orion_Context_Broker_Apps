@@ -13,3 +13,5 @@ Mongo DM host run
 sudo docker-compose -f docker-compose.dev.yml up
 
 http://192.168.101.115:9090/ngsi-ld/v1/entities
+
+https://cloud.emergencity.de/apps/deck/#/board/66
