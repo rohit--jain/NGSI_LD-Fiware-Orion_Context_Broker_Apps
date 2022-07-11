@@ -40,8 +40,8 @@ def url_reader(fileName):
             url_line = url_line.rstrip()
     f.close()
     if "\n" in url_line:
-        print("ERROR: Possible Malformed URL !")
-    print("REST Method to URL : " + url_line)
+        print("\nERROR: Possible Malformed URL !")
+    print("\nREST Method to URL : " + url_line)
     return url_line
 
 
@@ -50,15 +50,19 @@ def main():
         print("Working with REST POST method...")
         json_file = str(cmd_args.file_number) + ".json"
         url_file = str(cmd_args.file_number) + ".txt"
+        post_data = {}
         if check_file_exists(json_file):
             if check_file_exists(url_file):
                 with open(json_file, "r") as f:
                     post_data = json.load(f)
+                    print("\nPOSTing Data Content:\n")
                     print(post_data)
-                post_req = url_reader(url_file)
-
-                # response_post = requests.post(req_url)
-                # print("Response POST: " + response_post.content)
+                post_req_url = url_reader(url_file)
+                post_response = requests.post(post_req_url, post_data)
+                post_response_data = post_response.content.decode("ascii")
+                post_response_code = str(post_response.status_code)
+                print("\nResponse POST Status Code: " + post_response_code)
+                print("\nResponse POST: " + post_response_data)
             else:
                 print("ERROR: URL input file: " + url_file + " missing!")
         else:
