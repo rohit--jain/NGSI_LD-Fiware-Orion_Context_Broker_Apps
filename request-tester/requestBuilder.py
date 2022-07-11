@@ -77,9 +77,9 @@ def main():
             response_get = requests.get(get_req)
             response_json = response_get.content.decode("ascii")
             print("Response GET: " + response_json)
-            response_output = open("response.json", "w")
-            response_output.writelines(response_json)
-            response_output.close()
+            # response_output = open("response.json", "w")
+            # response_output.writelines(response_json)
+            # response_output.close()
 
         else:
             print("ERROR: URL input file: " + url_file + " missing!")
