@@ -1,0 +1,15 @@
+http://192.168.101.115:8000/docs#/base_entities/List_Base_Entities_for_Scenario_scenarios__scenario_id__entities__get
+
+Orion Broker
+sudo docker-compose -f docker-compose-aaio.yml up
+
+Water Simulation Runner
+poetry run scripts/import/water-simulation.py --user user --password test --scenario 629f551c753127e04a534ea5  data/scenarios/net1.json
+
+VM Server Ip
+192.168.101.115
+
+Mongo DM host run
+sudo docker-compose -f docker-compose.dev.yml up
+
+http://192.168.101.115:9090/ngsi-ld/v1/entities
