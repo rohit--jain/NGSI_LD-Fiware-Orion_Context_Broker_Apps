@@ -1,0 +1,24 @@
+vs tools terminal
+
+sudo docker-compose -f docker-compose.dev.yml up
+
+cd tools
+
+pyenv install
+https://github.com/pyenv/pyenv-installer/issues/103
+
+poetry install
+https://stackoverflow.com/questions/70003829/poetry-installed-but-poetry-command-not-found
+
+Poetry run scenario
+
+poetry run scripts/import/scenarios.py --user user --password test data/scenarios/sample_scenarios.json
+
+Next you get 3 scenario ids and then use browser to http://localhost:8000/docs
+
+Sending entities into scenario
+
+poetry run scripts/import/water-simulation.py --user user --password test --scenario 629f551c753127e04a534ea5  data/scenarios/net1.json
+
+Check into browser if entities populate
+http://localhost:8000/docs#/base_entities/List_Base_Entities_for_Scenario_scenarios__scenario_id__entities__get

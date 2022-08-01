@@ -1,0 +1,52 @@
+Design Board
+---------------
+https://miro.com/app/board/o9J_lmBWPeQ=/
+
+Git Repo2
+----------
+https://github.com/LOEWE-emergenCITY/emergencity-kb-scenario-manager
+https://github.com/LOEWE-emergenCITY/emergencity-kb-scenario-deployer
+
+Documentation
+-----------------https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/What+is+Context+Broker
+This was for the smart data models in General: https://www.fiware.org/smart-data-models/
+Our Domain is smart water based on EPANET: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/tree/master
+The tutorials for NGSI-LD and FIWARE are here: https://ngsi-ld-tutorials.readthedocs.io/en/latest/
+
+https://git.rwth-aachen.de/fst-tuda/projects/wiki/stud/-/wikis/home
+
+martin.hock@fst.tu-darmstadt.de
+
+https://recording.tk.informatik.tu-darmstadt.de/#/
+
+No SQL DB: https://www.youtube.com/watch?v=0buKQHokLK8
+Data Science: https://www.youtube.com/watch?v=CC66RXeTn_4https://www.youtube.com/watch?v=exqjWW3_BTY
+
+https://recording.tk.informatik.tu-darmstadt.de/#/lecture/tk1-ws2021/tk1-chapter3.2-distributedalgorithms-synchronization-part1-time
+
+Tutorial: https://ngsi-ld-tutorials.readthedocs.io/en/latest/index.html
+Scorpio Context Broker: https://scorpio.readthedocs.io/en/latest/API_walkthrough.html
+https://realpython.com/flask-connexion-rest-api/
+
+Open API 3.0
+https://www.youtube.com/watch?v=mViFmjcDOoA
+
+https://realpython.com/api-integration-in-python/
+
+https://realpython.com/python-type-checking/
+
+https://realpython.com/python-lambda/
+
+https://scorpio.readthedocs.io/en/latest/HelloWorld.html
+
+https://github.com/LOEWE-emergenCITY/emergencity-kb-scenario-manager/blob/b881d1b4534625a556cb34bc1b58bf5e5fe68d42/tools/scripts/import/water-simulation.py#L133
+
+https://github.com/LOEWE-emergenCITY/emergencity-kb-scenario-manager/blob/main/tools/kbscenariotools/endpoint.py
+
+
+FST Server------------------------FST-115.fst.maschinenbau.tu-darmstadt.de
+
+Zulip****************https://zulip.emergencity.de/login/#narrow/pm-with/8-user8
+-- 
+Thanks and Regards,
+Rohit Jain---------------------------------------
