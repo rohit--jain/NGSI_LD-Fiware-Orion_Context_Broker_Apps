@@ -228,16 +228,17 @@ def set_pattern_data(data_in, data_out, options):
     set_if_not_null(data_in, data_out, "source")
 
 def dump_response(data):
-    dump_file = open("request_data.txt", "a")
+    dump_file = open("request_data.json", "a")
     dump_file.write("\n------------------ RESPONSE START ----------------------\n")
-    decoded_data = data#.decode("ascii")
-    json_formatted_response_data = json.dumps(decoded_data, indent = 4) 
-    dump_file.write(str(json_formatted_response_data))
+    binary_data = data.encode('ascii')
+    decoded_data = binary_data.decode("ascii")
+    #json_formatted_response_data = json.dumps(decoded_data, indent = 4) 
+    dump_file.write(str(decoded_data))
     dump_file.write("\n------------------ RESPONSE END ----------------------\n")
     dump_file.close()
 
 def dump_request(data):
-    dump_file = open("request_data.txt", "a")
+    dump_file = open("request_data.json", "a")
     dump_file.write("\n------------------ REQUEST START ----------------------\n")
     json_formatted_request_data = json.dumps(data, indent = 4) 
     dump_file.write(str(json_formatted_request_data))
@@ -245,6 +246,12 @@ def dump_request(data):
     dump_file.close()
 
 def upload_model(data):
+    # context_entry = {"@context": [
+    #     "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+    # ]}
+    # data_json = json.dumps(data)
+    # data_json.dumps(context_entry)
+    data["@context"] = "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
     path = f"/ngsi-ld/v1/entities/"
     dump_request(data)
     status, res = endpoint.post(path, data, "application/ld+json")
